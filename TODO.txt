@@ -1,0 +1,10 @@
+New enemies
+	-Tank with 1 turret
+	-Wings with 2 turrets
+	
+Per-player HUD
+Story Mode
+Difficulties
+Adaptive explosions
+	Based on recent explosions
+	Based on fps

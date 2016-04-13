@@ -1,0 +1,124 @@
+0.5.5 - The Shiny Update:
+
+Changes/Improvements:
+-Enemies now have different sprites depending on their weapon type
+-Stars can be different colors
+-New player sprite
+-Player laser color now matches ship
+-Updated how to exit the store
+-Glowy Glowy
+-Just an overhaul of everything that annoyed me, graphics-wise
+
+Under the Hood:
+-Optimized Parenting
+
+Bug Fixes
+-Boss now actually recieves penetration damage
+
+0.5.4:
+
+Bug Fixes:
+-Fixed multiplayer autofire not working
+
+0.5.3:
+
+Changes:
+-Reduced enemy spawn rate and fire rate
+-Fixed splash screen bug
+
+0.5.2:
+
+New:
+-Added autofire (toggle with Q, or the A/Cross button on controllers)
+-Added HUD for enemies left
+-Added an intro cutscene
+-Added New controls
+	--Z to cycle weapons
+	--X to shoot
+
+Changes/Imrpovements:
+-60fps
+-Shrunk screen width a bit
+-Boss's cannons are less random
+-When an update is available, you can now press 'U' to jump straight to the download page
+
+
+0.5.1:
+
+Bug Fixes:
+-Fixed game-breaking bug from 0.5.0
+-Fixed weapon switching with gamepads
+-Fixed bug where you could re-purchase a weapon you already bought
+
+Changes:
+-Boss now has even more health
+-Money per boss hit reduced to $15 from $25
+-Enemies spawn faster and in greater numbers
+-Enemy amount curve tweaked
+-Made "Entering New Sector" popup shorter
+-Made enemy destruction popups shorter
+-Made money popups shorter
+-Changed the formula for how many enemies per level is calculated
+-Enemy lasers are now drawn on top of everything else
+-Adding more players slightly increases the difficulty
+
+0.5.0:
+
+New:
+-Added update checker (one of the most important things a game needs)
+-Added analog sensitivity to gamepad
+-Widescreen resolution (sorry about that)
+-Skippable intro (and that)
+-Smaller hitbox. Now one pixel right in the center of your window
+-Burst spawns: 
+	--Besides standard formations, you will have a 10% chance of spawning a 
+		bunch of enemies (up to level^1.5). This'll bump up the difficulty,
+		while also making the later levels go faster.
+-Decided to begin keeping detailed changelog (very important, don't put this off)
+		
+Fixes/Improvements:
+
+-You now visit the store right after killing the boss
+-Boss health increases exponentially instead of linearly
+-Penetrating lasers now cause accurate damage to Boss, instead of just one
+-Fixed quick splash bug right before the BrickShack splash
+-The logo will enter the self destruct sequence after only one shot, and will
+	immediately explode after a second
+-The cost of a new ship now equals (total player lives)^2 x 250
+-Weapons are now permanent when bought
+-Removed volume setting until fixed
+-Changed installer graphics
+
+0.4.1:
+
+-Seeeeeeecret
+
+0.4.0:
+
+-Added Boss
+-Cleaned some more messy things
+
+0.3.1:
+
+-Added settings menu
+-Shrunk player hitbox to the size of the window
+-Added WASD controls (really late with that lol)
+-Cleaned a bit more of my mess after learning a bit more of GM
+
+0.3.0:
+
+-Gamepad support
+
+0.2.1:
+
+-Re-Added enemy shields
+-Fixed a bit of the mess from not really knowing GM
+
+Game Maker Update:
+
+Completely transferred my 2k+ lines of ameteur C++ code (shudder) to Game Maker: Studio.
+The end of the dark ages...
+
+Release Zero:
+
+We don't talk about our dark beginnings...
