@@ -179,6 +179,7 @@
     <object>objects\obj_version</object>
     <object>objects\obj_weaponHUD</object>
     <objects name="Players">
+      <object>objects\objP_player</object>
       <object>objects\obj_player</object>
       <object>objects\obj_blueLaser</object>
       <object>objects\obj_player2</object>
