@@ -81,10 +81,6 @@
   <backgrounds name="background"/>
   <paths name="paths"/>
   <scripts name="scripts">
-    <script>scripts\clearStore.gml</script>
-    <script>scripts\deathPop.gml</script>
-    <script>scripts\enemyPop.gml</script>
-    <script>scripts\enemyShoot.gml</script>
     <scripts name="Entity Logic">
       <script>scripts\enemyLogic.gml</script>
       <script>scripts\cannonLogic.gml</script>
@@ -103,17 +99,13 @@
       <script>scripts\wipeEnemies.gml</script>
       <script>scripts\wipeEnemyLasers.gml</script>
     </scripts>
-    <script>scripts\gameEngine.gml</script>
-    <script>scripts\gameVariables.gml</script>
     <scripts name="Initializations">
       <script>scripts\enemyInit.gml</script>
       <script>scripts\musicInit.gml</script>
+      <script>scripts\gameVariables.gml</script>
       <script>scripts\playerInit.gml</script>
       <script>scripts\bossInit.gml</script>
     </scripts>
-    <script>scripts\moneyPop.gml</script>
-    <script>scripts\multiplayerManager.gml</script>
-    <script>scripts\musicEngine.gml</script>
     <scripts name="Particles">
       <script>scripts\explosionParticleSystem.gml</script>
       <script>scripts\explosionRemover.gml</script>
@@ -122,6 +114,14 @@
       <script>scripts\sparkParticleSystem.gml</script>
       <script>scripts\sparkRemover.gml</script>
     </scripts>
+    <script>scripts\clearStore.gml</script>
+    <script>scripts\deathPop.gml</script>
+    <script>scripts\enemyPop.gml</script>
+    <script>scripts\enemyShoot.gml</script>
+    <script>scripts\gameEngine.gml</script>
+    <script>scripts\moneyPop.gml</script>
+    <script>scripts\multiplayerManager.gml</script>
+    <script>scripts\musicEngine.gml</script>
     <script>scripts\pauseRoom.gml</script>
     <script>scripts\playerGamepad.gml</script>
     <script>scripts\playerShoot.gml</script>
@@ -151,6 +151,30 @@
       <object>objects\obj_cannon</object>
       <object>objects\obj_boss</object>
     </objects>
+    <objects name="Players">
+      <object>objects\objP_player</object>
+      <object>objects\obj_player</object>
+      <object>objects\obj_blueLaser</object>
+      <object>objects\obj_player2</object>
+      <object>objects\obj_multiplayer</object>
+      <object>objects\obj_player3</object>
+      <object>objects\obj_player4</object>
+    </objects>
+    <objects name="Settings">
+      <object>objects\obj_volume</object>
+      <object>objects\obj_settings</object>
+      <object>objects\obj_quitSettings</object>
+      <object>objects\obj_explosionSettings</object>
+    </objects>
+    <objects name="Store">
+      <object>objects\obj_penetration</object>
+      <object>objects\obj_doubleLaser</object>
+      <object>objects\obj_quitStore</object>
+      <object>objects\obj_newShip</object>
+      <object>objects\obj_tripleLaser</object>
+      <object>objects\obj_purge</object>
+      <object>objects\obj_storeManager</object>
+    </objects>
     <object>objects\obj_BorA</object>
     <object>objects\obj_brickshackSplash</object>
     <object>objects\obj_controllerGame</object>
@@ -178,30 +202,6 @@
     <object>objects\obj_Touch</object>
     <object>objects\obj_version</object>
     <object>objects\obj_weaponHUD</object>
-    <objects name="Players">
-      <object>objects\objP_player</object>
-      <object>objects\obj_player</object>
-      <object>objects\obj_blueLaser</object>
-      <object>objects\obj_player2</object>
-      <object>objects\obj_multiplayer</object>
-      <object>objects\obj_player3</object>
-      <object>objects\obj_player4</object>
-    </objects>
-    <objects name="Settings">
-      <object>objects\obj_volume</object>
-      <object>objects\obj_settings</object>
-      <object>objects\obj_quitSettings</object>
-      <object>objects\obj_explosionSettings</object>
-    </objects>
-    <objects name="Store">
-      <object>objects\obj_penetration</object>
-      <object>objects\obj_doubleLaser</object>
-      <object>objects\obj_quitStore</object>
-      <object>objects\obj_newShip</object>
-      <object>objects\obj_tripleLaser</object>
-      <object>objects\obj_purge</object>
-      <object>objects\obj_storeManager</object>
-    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\splash</room>

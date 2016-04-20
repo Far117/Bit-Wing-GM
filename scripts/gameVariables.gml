@@ -16,7 +16,7 @@
     
     globalvar inIDE;
     
-    global.inIDE=1;
+    global.inIDE=0;
     //global.inIDE=0;
     
     global.enemiesLeft=0;

@@ -44,7 +44,9 @@
     
     if((room==settings || global.inShop) && 
         gamepad_button_check_pressed(player-1,gp_face1)){
+        
         playerShoot();
+        
     }else if(gamepad_button_check_pressed(player-1,gp_face1)){
         autoFire=!autoFire;
     }

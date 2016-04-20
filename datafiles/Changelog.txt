@@ -8,12 +8,19 @@ Changes/Improvements:
 -Updated how to exit the store
 -Glowy Glowy
 -Just an overhaul of everything that annoyed me, graphics-wise
+-Boss now gives $25 per hit instead of $15
+-You now switch to single laser in shop
+-Stars speed up slightly at higher levels
+-End stats are now visible
+
 
 Under the Hood:
 -Optimized Parenting
 
-Bug Fixes
+Bug Fixes:
 -Boss now actually recieves penetration damage
+-Autofire no longer crashes during certain actions
+-Keyboard controls no longer interfere with other players
 
 0.5.4:
 

@@ -155,9 +155,11 @@
             <kind>1</kind>
             <string>///Reset Player Positions
 
-with(obj_player){
+with(objP_player){
     x=xstart;
     y=ystart;
+    
+    playerWeapon=0;
 }
 </string>
           </argument>
@@ -207,7 +209,9 @@ with(obj_player){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>{
+            <string>///Draw Sectors Cleared
+
+{
     draw_set_halign(fa_center);
     draw_set_color(c_yellow);
     if(global.level&gt;1){

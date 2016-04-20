@@ -51,8 +51,8 @@
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
   </views>
   <instances>
-    <instance objName="obj_brickshackSplash" x="480" y="352" name="inst_D7B7C7C4" locked="0" code="" scaleX="11.455696105957" scaleY="11.7333335876465" colour="4294967295" rotation="0"/>
-    <instance objName="obj_fade" x="576" y="256" name="inst_FEA4640B" locked="0" code="" scaleX="53.2903213500977" scaleY="45.9677429199219" colour="4294967295" rotation="0"/>
+    <instance objName="obj_brickshackSplash" x="512" y="352" name="inst_D7B7C7C4" locked="0" code="" scaleX="11.455696105957" scaleY="11.7333335876465" colour="4294967295" rotation="0"/>
+    <instance objName="obj_fade" x="576" y="384" name="inst_FEA4640B" locked="0" code="" scaleX="53.2903213500977" scaleY="45.9677429199219" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

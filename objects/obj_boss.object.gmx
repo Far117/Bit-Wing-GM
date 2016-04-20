@@ -389,7 +389,7 @@
 if(life&gt;0){
 
     destroyedByPlayer=other.shotByPlayer;
-    giveMoney(15);
+    giveMoney(25);
     score+=25;
     
     /*
