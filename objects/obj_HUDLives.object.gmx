@@ -28,7 +28,7 @@
             <string>///Init
 
 image_angle=180;
-image_xscale=.8;
+image_xscale=2.5;
 image_yscale=.8;
 
 player=instance_number(obj_HUDLives);
@@ -39,6 +39,9 @@ icon=instance_create(x,y, obj_HUDPlayerIcon);
 icon.image_index=player-1;
 
 life=0;
+streakHUD=0;
+streakStringHUD="";
+multiplierHUD=0;
 </string>
           </argument>
         </arguments>
@@ -174,7 +177,7 @@ if(x!=0 &amp;&amp; global.gameStart){
             <kind>1</kind>
             <string>///Icon Follow
 
-icon.x=x+(sprite_width/4);
+icon.x=x+(sprite_width/5);
 icon.y=y-(sprite_height/2);
 </string>
           </argument>
@@ -201,10 +204,18 @@ icon.y=y-(sprite_height/2);
 var tmpLife;
 var found=0;
 
+var tmpStreakStringHUD="";
+var tmpStreakHUD=0;
+var tmpMultiplierHUD=0;
+
 if(player==1){
     with(obj_player){
         if(object_index==obj_player){
             tmpLife=playerLives;
+            tmpStreakHUD=killstreak;
+            tmpStreakStringHUD=streakString;
+            tmpMultiplierHUD=multiplier;
+            
             found=1;
         }
     }
@@ -212,6 +223,11 @@ if(player==1){
     with(obj_player2){
         if(object_index==obj_player2){
             tmpLife=playerLives;
+            tmpStreak=killstreak;
+            tmpStreakHUD=killstreak;
+            tmpStreakStringHUD=streakString;
+            tmpMultiplierHUD=multiplier;
+            
             found=1;
         }
     }
@@ -219,6 +235,11 @@ if(player==1){
     with(obj_player3){
         if(object_index==obj_player3){
             tmpLife=playerLives;
+            tmpStreak=killstreak;
+            tmpStreakHUD=killstreak;
+            tmpStreakStringHUD=streakString;
+            tmpMultiplierHUD=multiplier;
+            
             found=1;
         }
     }
@@ -226,6 +247,11 @@ if(player==1){
     with(obj_player4){
         if(object_index==obj_player4){
             tmpLife=playerLives;
+            tmpStreak=killstreak;
+            tmpStreakHUD=killstreak;
+            tmpStreakStringHUD=streakString;
+            tmpMultiplierHUD=multiplier;
+            
             found=1;
         }
     }
@@ -236,6 +262,61 @@ if(found=0){
 }
 
 life=tmpLife;
+
+streakStringHUD=tmpStreakStringHUD;
+streakHUD=tmpStreakHUD;
+multiplierHUD=tmpMultiplierHUD;
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Calculate Streak
+
+/*
+
+
+if(!overloaded){
+    
+        if(streak &gt;=200){
+            streakString=global.streakStrings[5];
+        } else if(streak &gt;=150){
+            streakString=global.streakStrings[4];
+        } else if(streak &gt;=100){
+            streakString=global.streakStrings[3];
+        } else if(streak &gt;=75){
+            streakString=global.streakStrings[2];
+        } else if(streak &gt;=50){
+            streakString=global.streakStrings[1];
+        } else if(streak &gt;=10){
+            streakString=global.streakStrings[0];
+        }
+    
+} else {
+    streakString="OVERLOADED!!!";
+}
+
+multiplier=streak/10+1;
+
+streakString=streakString+" x"+string(multiplier);
+//streakString=string_delete(streakString,string_length(streakString)-1,1);
+
+*/
 </string>
           </argument>
         </arguments>
@@ -262,14 +343,31 @@ life=tmpLife;
 
 draw_self();
 
-draw_self();
 draw_set_color(c_white);
-draw_set_halign(fa_center);
 
+draw_set_valign(fa_middle);
 
+draw_set_font(fnt_LCD_SOLID_BIG);
 
-draw_text_transformed(x+sprite_width/1.5,y-sprite_height/2,
-                                string(life),.85,.85,0);
+/*
+draw_text_transformed(x+sprite_width/4,y-sprite_height/2,
+                                string(life) +"   " +
+                                streakStringHUD + " x" +
+                                string(multiplierHUD),
+                                .2,.2,0);
+*/
+draw_set_halign(fa_right);
+draw_text_transformed(icon.x-icon.sprite_width,y-sprite_height/2,
+                                string(life),
+                                .1,.1,0);
+                                
+                                
+draw_set_halign(fa_left);                       
+draw_text_transformed(icon.x+icon.sprite_width,y-sprite_height/2,
+                                streakStringHUD,
+                                .1,.1,0);
+                                
+draw_set_font(fnt_LCD_SOLID);
 </string>
           </argument>
         </arguments>

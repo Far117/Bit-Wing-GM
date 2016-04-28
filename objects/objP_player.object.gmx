@@ -91,7 +91,7 @@
             <kind>1</kind>
             <string>///Create Life HUD
 
-lifeHUD=instance_create(-100,0, obj_HUDLives);
+lifeHUD=instance_create(-200,0, obj_HUDLives);
 lifeHUD.player=player;
 </string>
           </argument>
@@ -123,6 +123,143 @@ with(obj_HUDLives){
     }
 }
 </string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="5">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Screen Flash Undo
+
+background_color=c_black;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="4">
+      <action>
+        <libid>1</libid>
+        <id>605</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>0</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>Overload Shoot</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Overload Shoot
+
+if(global.inShop){
+    overloaded=0;
+}
+
+if(!overloaded){
+    overloadedTimer=0;
+    exit;
+}
+
+for(z=0;z&lt;overloadedTimer/100+1;z++){
+
+    shot=instance_create(x,y,obj_blueLaser);
+    shot.shotByPlayer=player;
+    shot.hits=penetration;
+    
+    shot.direction+=random_range(-overloadedTimer,overloadedTimer);
+
+}
+
+overloadedTimer++;
+
+alarm[4]=5;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="3">
+      <action>
+        <libid>1</libid>
+        <id>605</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>0</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>Multikills</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>611</id>
+        <kind>6</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>multikills</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>0</string>
           </argument>
         </arguments>
       </action>
@@ -180,6 +317,52 @@ with(obj_HUDLives){
       </action>
     </event>
     <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Death And Visibility Check
+
+if(playerLives&lt;=0){
+    instance_destroy();
+}
+
+if(visible){
+
+    if(!overloaded){
+        instance_create(x+(sprite_width/2)-2,y+sprite_height/2, obj_engine);
+        instance_create(x-(sprite_width/2)+5, y+sprite_height/2, obj_engine);
+    } else {
+        eng=instance_create(x+(sprite_width/2)-2,y+sprite_height/2, obj_engine);
+        eng.overloaded=1;
+        eng=instance_create(x-(sprite_width/2)+5, y+sprite_height/2, obj_engine);
+        eng.overloaded=1;
+        eng=instance_create(x+(sprite_width/2)-2,y+sprite_height/2, obj_engine);
+        eng.overloaded=1;
+        eng=instance_create(x-(sprite_width/2)+5, y+sprite_height/2, obj_engine);
+        eng.overloaded=1;
+        eng=instance_create(x+(sprite_width/2)-2,y+sprite_height/2, obj_engine);
+        eng.overloaded=1;
+        eng=instance_create(x-(sprite_width/2)+5, y+sprite_height/2, obj_engine);
+        eng.overloaded=1;
+    }
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
       <action>
         <libid>1</libid>
         <id>601</id>
@@ -262,157 +445,115 @@ with(obj_HUDLives){
       </action>
       <action>
         <libid>1</libid>
-        <id>612</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>-1</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_if_variable</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>0</kind>
-            <string>playerLives</string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>1</string>
-          </argument>
-          <argument>
-            <kind>4</kind>
-            <string>1</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>203</id>
-        <kind>0</kind>
+        <id>603</id>
+        <kind>7</kind>
         <userelative>0</userelative>
         <isquestion>0</isquestion>
         <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_kill_object</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>612</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>-1</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_if_variable</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>0</kind>
-            <string>visible</string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>1</string>
-          </argument>
-          <argument>
-            <kind>4</kind>
-            <string>0</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>422</id>
-        <kind>1</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>0</exetype>
+        <exetype>2</exetype>
         <functionname></functionname>
         <codestring></codestring>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>201</id>
-        <kind>0</kind>
-        <userelative>-1</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_create_object</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>-1</relative>
-        <isnot>0</isnot>
         <arguments>
           <argument>
-            <kind>10</kind>
-            <object>obj_engine</object>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>(sprite_width/2)-2</string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>sprite_height/2</string>
+            <kind>1</kind>
+            <string>///Set Streak
+
+streakString="";
+
+if(!overloaded){
+    
+        if(killstreak &gt;=200){
+            streakString=global.streakStrings[5];
+        } else if(killstreak &gt;=150){
+            streakString=global.streakStrings[4];
+        } else if(killstreak &gt;=100){
+            streakString=global.streakStrings[3];
+        } else if(killstreak &gt;=75){
+            streakString=global.streakStrings[2];
+        } else if(killstreak &gt;=50){
+            streakString=global.streakStrings[1];
+        } else if(killstreak &gt;=25){
+            streakString=global.streakStrings[0];
+        }
+    
+} else {
+    streakString="OVERLOADED!!!";
+}
+
+multiplier=killstreak/10+1;
+
+streakString=streakString+" x"+string(multiplier);
+//streakString=string_delete(streakString,string_length(streakString)-1,1);
+</string>
           </argument>
         </arguments>
       </action>
       <action>
         <libid>1</libid>
-        <id>201</id>
-        <kind>0</kind>
-        <userelative>-1</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_create_object</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>-1</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>10</kind>
-            <object>obj_engine</object>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>-(sprite_width/2)+5</string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>sprite_height/2</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>424</id>
-        <kind>2</kind>
+        <id>603</id>
+        <kind>7</kind>
         <userelative>0</userelative>
         <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>0</exetype>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
         <functionname></functionname>
         <codestring></codestring>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Overload Shake
+
+if(overloaded){
+    x+=random_range(-5,5);
+    y+=random_range(-5,5);
+    
+    spark=instance_create(x+random_range(-sprite_width/2,sprite_width/2),
+        y+random_range(-sprite_height/2,sprite_height/2),
+        obj_plink);
+    spark.playSound=0;
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Overload Mode Check
+
+if(overloaded){
+    exit;
+}
+
+if(killstreak&gt;=200 &amp;&amp; multikills==20){
+    overloaded=1;
+    alarm[4]=5;
+    
+    background_color=c_white;
+    alarm[5]=20;
+}
+</string>
+          </argument>
+        </arguments>
       </action>
     </event>
     <event eventtype="4" ename="obj_quitStore">
@@ -709,6 +850,54 @@ if(levelLastSpawnedRing!=global.level){
           </argument>
         </arguments>
       </action>
+      <action>
+        <libid>1</libid>
+        <id>611</id>
+        <kind>6</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>killstreak</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>0</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>611</id>
+        <kind>6</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>multiplier</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>1</string>
+          </argument>
+        </arguments>
+      </action>
     </event>
     <event eventtype="8" enumb="0">
       <action>
@@ -727,7 +916,9 @@ if(levelLastSpawnedRing!=global.level){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_self(); 
+            <string>///Draw Self
+
+draw_self(); 
 </string>
           </argument>
         </arguments>
@@ -769,6 +960,39 @@ if(levelLastSpawnedRing!=global.level){
           <argument>
             <kind>0</kind>
             <string></string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Draw Streak
+
+/*
+
+draw_set_halign(fa_center);
+draw_set_color(c_yellow);
+draw_set_font(fnt_LCD_SOLID_BIG);
+
+draw_text_transformed(x,y+sprite_height/2+20,streakString,.1,.1,0);
+
+draw_set_font(fnt_LCD_SOLID);
+
+*/
+</string>
           </argument>
         </arguments>
       </action>

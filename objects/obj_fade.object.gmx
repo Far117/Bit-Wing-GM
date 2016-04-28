@@ -107,7 +107,8 @@ alarm[0]=1;
           <argument>
             <kind>1</kind>
             <string>if(fadeout &amp;&amp; image_alpha&gt;=1.5){
-    room_goto(introMovie);
+    //room_goto(introMovie);
+    room_goto(game);
 }
 </string>
           </argument>

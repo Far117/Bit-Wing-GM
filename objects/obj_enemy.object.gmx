@@ -692,26 +692,6 @@ right.y = y + lengthdir_y(distance,c)
       </action>
       <action>
         <libid>1</libid>
-        <id>701</id>
-        <kind>0</kind>
-        <userelative>-1</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_set_score</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>-1</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>0</kind>
-            <string>100</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
         <id>611</id>
         <kind>6</kind>
         <userelative>-1</userelative>
@@ -731,6 +711,46 @@ right.y = y + lengthdir_y(distance,c)
           <argument>
             <kind>0</kind>
             <string>-1</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>601</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_execute_script</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>9</kind>
+            <script>givePoints</script>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>destroyedByPlayer</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>100</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
           </argument>
         </arguments>
       </action>
@@ -788,7 +808,38 @@ right.y = y + lengthdir_y(distance,c)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>{
+            <string>///Multikills/Streaks/Overload
+
+{
+
+    if(destroyedByPlayer==1){
+        obj_player.multikills++;
+        obj_player.alarm[3]=room_speed/2;
+        obj_player.killstreak++;
+        tmp=instance_create(x,y,obj_multikillPop);
+        tmp.destroyedByPlayer=destroyedByPlayer;
+        
+    }else if(destroyedByPlayer==2){
+        obj_player2.multikills++;
+        obj_player2.alarm[3]=room_speed/2;
+        obj_player2.killstreak++;
+        tmp=instance_create(x,y,obj_multikillPop);
+        tmp.destroyedByPlayer=destroyedByPlayer;
+        
+    }else if(destroyedByPlayer==3){
+        obj_player3.multikills++;
+        obj_player3.alarm[3]=room_speed/2;
+        obj_player3.killstreak++;
+        tmp=instance_create(x,y,obj_multikillPop);
+        tmp.destroyedByPlayer=destroyedByPlayer;
+        
+    }else if(destroyedByPlayer==4){
+        obj_player4.multikills++;
+        obj_player4.alarm[3]=room_speed/2;
+        obj_player4.killstreak++;
+        tmp=instance_create(x,y,obj_multikillPop);
+        tmp.destroyedByPlayer=destroyedByPlayer;
+    }
     /*
     tmp=instance_create(x,y,obj_enemyPop);
     
@@ -952,6 +1003,54 @@ right.y = y + lengthdir_y(distance,c)
           <argument>
             <kind>0</kind>
             <string>-1</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>611</id>
+        <kind>6</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>other</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>killstreak</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>0</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>611</id>
+        <kind>6</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>multiplier</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>1</string>
           </argument>
         </arguments>
       </action>

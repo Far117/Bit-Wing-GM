@@ -29,7 +29,7 @@
           </argument>
           <argument>
             <kind>0</kind>
-            <string>"Alpha 0.5.5"</string>
+            <string>"Alpha 0.5.6"</string>
           </argument>
         </arguments>
       </action>
@@ -49,7 +49,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>printVersion="Bit Wing " + currentVersion+" (Checking for Updates...)";
+            <string>///Version Init
+
+printVersion="Bit Wing " + currentVersion+" (Checking for Updates...)";
 </string>
           </argument>
         </arguments>
@@ -70,7 +72,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(os_is_network_connected()){
+            <string>///Check Internet
+
+if(os_is_network_connected()){
 
     file=http_get_file("https://dl.dropboxusercontent.com/u/68488237/updates/Bit%20Wing/version",
                         working_directory+"\version");
@@ -166,7 +170,7 @@
     }
     */
     if(global.inIDE){
-        printVersion="Bit Wing " + currentVersion;
+        printVersion="Bit Wing " + currentVersion + "(Dev)";
     }
 }
 </string>

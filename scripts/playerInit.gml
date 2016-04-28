@@ -14,7 +14,7 @@
     tripleAmmo=0;
     purgeAmmo=0;
     playerMoney=0;
-    playerPoints=0;
+    playerScore=0;
     
     autoFire=1;
     canShoot=1;
@@ -25,4 +25,13 @@
     
     levelLastSpawnedRing=0;
     
+    
+    multikills=0;
+    killstreak=0;
+    multiplier=1;
+    overloaded=0;
+    overloadedTimer=0;
+    alarm[4]=10;
+    
+    streakString="";
 }

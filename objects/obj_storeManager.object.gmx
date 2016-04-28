@@ -219,7 +219,7 @@ with(objP_player){
     } else {
         str=string(global.level)+" Sector Cleared";
     }
-    draw_text(room_width/2,20,str);
+    draw_text(room_width/2,60,str);
 }
 </string>
           </argument>

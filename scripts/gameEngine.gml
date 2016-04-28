@@ -40,7 +40,7 @@ Alarms:
     */
     var tmpLives;
     tmpLives=0;
-    with(obj_player){
+    with(objP_player){
         tmpLives+=playerLives;
     }
     totalLives=tmpLives;

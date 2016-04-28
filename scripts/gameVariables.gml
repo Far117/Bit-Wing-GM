@@ -16,8 +16,13 @@
     
     globalvar inIDE;
     
-    global.inIDE=0;
+    global.inIDE=1;
     //global.inIDE=0;
+    
+    globalvar player1Score;
+    globalvar player2Score;
+    globalvar player3Score;
+    globalvar player4Score;
     
     global.enemiesLeft=0;
     global.spawnsLeft=0;
@@ -61,4 +66,10 @@
     globalvar explosionModifier;
     global.explosionModifier=1;
     
+    multikillNamesInit();
+    
+    global.player1Score=0;
+    global.player2Score=0;
+    global.player3Score=0;
+    global.player4Score=0;
 }

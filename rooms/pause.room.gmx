@@ -54,6 +54,7 @@
     <instance objName="obj_controllerStar" x="0" y="0" name="inst_4F9BEC03" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_pauseRoom" x="32" y="0" name="inst_91DA1984" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_player" x="512" y="672" name="inst_E9777FBB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_explosionSettings" x="928" y="64" name="inst_62B264C9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

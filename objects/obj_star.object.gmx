@@ -227,7 +227,7 @@ col=make_color_rgb(rgb[0],rgb[1],rgb[2]);
             <kind>1</kind>
             <string>///Set Speed
 
-vspeed=starSize+(global.level/5);
+vspeed=starSize+(global.level/2);
 </string>
           </argument>
         </arguments>

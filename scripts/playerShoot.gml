@@ -1,4 +1,8 @@
 {
+
+    if(overloaded){
+        exit;
+    }
     
     /*
     if(playerWeapon==0){
