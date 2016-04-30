@@ -6,6 +6,7 @@ New:
 -Score now visible in real time
 -Overloaded mode (With a 200 killstreak, get a x20 kill)
 -Score multipliers (each kill grants .1)
+-Fully automatic updater!
 
 Changes/Improvements:
 -Hitboxes adjusted for accuracy

@@ -3,7 +3,7 @@
   <Configs name="configs">
     <Config>Configs\Default</Config>
   </Configs>
-  <datafiles number="1" name="datafiles">
+  <datafiles number="21" name="datafiles">
     <datafile>
       <name>Changelog.txt</name>
       <exists>-1</exists>
@@ -20,6 +20,176 @@
         </Config>
       </ConfigOptions>
       <filename>Changelog.txt</filename>
+    </datafile>
+    <datafile>
+      <name>_bz2.pyd</name>
+      <exists>-1</exists>
+      <size>53760</size>
+      <exportAction>2</exportAction>
+      <exportDir></exportDir>
+      <overwrite>0</overwrite>
+      <freeData>-1</freeData>
+      <removeEnd>0</removeEnd>
+      <store>0</store>
+      <ConfigOptions>
+        <Config name="Default">
+          <CopyToMask>9223372036854775807</CopyToMask>
+        </Config>
+      </ConfigOptions>
+      <filename>_bz2.pyd</filename>
+    </datafile>
+    <datafile>
+      <name>_hashlib.pyd</name>
+      <exists>-1</exists>
+      <size>783360</size>
+      <exportAction>2</exportAction>
+      <exportDir></exportDir>
+      <overwrite>0</overwrite>
+      <freeData>-1</freeData>
+      <removeEnd>0</removeEnd>
+      <store>0</store>
+      <ConfigOptions>
+        <Config name="Default">
+          <CopyToMask>9223372036854775807</CopyToMask>
+        </Config>
+      </ConfigOptions>
+      <filename>_hashlib.pyd</filename>
+    </datafile>
+    <datafile>
+      <name>_lzma.pyd</name>
+      <exists>-1</exists>
+      <size>137216</size>
+      <exportAction>2</exportAction>
+      <exportDir></exportDir>
+      <overwrite>0</overwrite>
+      <freeData>-1</freeData>
+      <removeEnd>0</removeEnd>
+      <store>0</store>
+      <ConfigOptions>
+        <Config name="Default">
+          <CopyToMask>9223372036854775807</CopyToMask>
+        </Config>
+      </ConfigOptions>
+      <filename>_lzma.pyd</filename>
+    </datafile>
+    <datafile>
+      <name>_socket.pyd</name>
+      <exists>-1</exists>
+      <size>47104</size>
+      <exportAction>2</exportAction>
+      <exportDir></exportDir>
+      <overwrite>0</overwrite>
+      <freeData>-1</freeData>
+      <removeEnd>0</removeEnd>
+      <store>0</store>
+      <ConfigOptions>
+        <Config name="Default">
+          <CopyToMask>9223372036854775807</CopyToMask>
+        </Config>
+      </ConfigOptions>
+      <filename>_socket.pyd</filename>
+    </datafile>
+    <datafile>
+      <name>_ssl.pyd</name>
+      <exists>-1</exists>
+      <size>1213440</size>
+      <exportAction>2</exportAction>
+      <exportDir></exportDir>
+      <overwrite>0</overwrite>
+      <freeData>-1</freeData>
+      <removeEnd>0</removeEnd>
+      <store>0</store>
+      <ConfigOptions>
+        <Config name="Default">
+          <CopyToMask>9223372036854775807</CopyToMask>
+        </Config>
+      </ConfigOptions>
+      <filename>_ssl.pyd</filename>
+    </datafile>
+    <datafile>
+      <name>Launcher.exe</name>
+      <exists>-1</exists>
+      <size>1285632</size>
+      <exportAction>2</exportAction>
+      <exportDir></exportDir>
+      <overwrite>0</overwrite>
+      <freeData>-1</freeData>
+      <removeEnd>0</removeEnd>
+      <store>0</store>
+      <ConfigOptions>
+        <Config name="Default">
+          <CopyToMask>9223372036854775807</CopyToMask>
+        </Config>
+      </ConfigOptions>
+      <filename>Launcher.exe</filename>
+    </datafile>
+    <datafile>
+      <name>launcher.ini</name>
+      <exists>-1</exists>
+      <size>250</size>
+      <exportAction>2</exportAction>
+      <exportDir></exportDir>
+      <overwrite>0</overwrite>
+      <freeData>-1</freeData>
+      <removeEnd>0</removeEnd>
+      <store>0</store>
+      <ConfigOptions>
+        <Config name="Default">
+          <CopyToMask>9223372036854775807</CopyToMask>
+        </Config>
+      </ConfigOptions>
+      <filename>launcher.ini</filename>
+    </datafile>
+    <datafile>
+      <name>library.zip</name>
+      <exists>-1</exists>
+      <size>446324</size>
+      <exportAction>2</exportAction>
+      <exportDir></exportDir>
+      <overwrite>0</overwrite>
+      <freeData>-1</freeData>
+      <removeEnd>0</removeEnd>
+      <store>0</store>
+      <ConfigOptions>
+        <Config name="Default">
+          <CopyToMask>9223372036854775807</CopyToMask>
+        </Config>
+      </ConfigOptions>
+      <filename>library.zip</filename>
+    </datafile>
+    <datafile>
+      <name>python34.dll</name>
+      <exists>-1</exists>
+      <size>2741248</size>
+      <exportAction>2</exportAction>
+      <exportDir></exportDir>
+      <overwrite>0</overwrite>
+      <freeData>-1</freeData>
+      <removeEnd>0</removeEnd>
+      <store>0</store>
+      <ConfigOptions>
+        <Config name="Default">
+          <CopyToMask>9223372036854775807</CopyToMask>
+        </Config>
+      </ConfigOptions>
+      <filename>python34.dll</filename>
+    </datafile>
+    <datafile>
+      <name>unicodedata.pyd</name>
+      <exists>-1</exists>
+      <size>758784</size>
+      <exportAction>2</exportAction>
+      <exportDir></exportDir>
+      <overwrite>0</overwrite>
+      <freeData>-1</freeData>
+      <removeEnd>0</removeEnd>
+      <store>0</store>
+      <ConfigOptions>
+        <Config name="Default">
+          <CopyToMask>9223372036854775807</CopyToMask>
+        </Config>
+      </ConfigOptions>
+      <filename>unicodedata.pyd</filename>
     </datafile>
   </datafiles>
   <NewExtensions/>
@@ -137,6 +307,7 @@
     <script>scripts\starSpawner.gml</script>
     <script>scripts\useBloom.gml</script>
     <script>scripts\weaponHUD.gml</script>
+    <script>scripts\streakHandler.gml</script>
   </scripts>
   <shaders name="shaders">
     <shader type="GLSLES">shaders\shd_bloom.shader</shader>
@@ -156,8 +327,8 @@
       <object>objects\obj_boss</object>
     </objects>
     <objects name="Players">
-      <object>objects\objP_player</object>
       <object>objects\obj_player</object>
+      <object>objects\objP_player</object>
       <object>objects\obj_blueLaser</object>
       <object>objects\obj_player2</object>
       <object>objects\obj_multiplayer</object>

@@ -51,7 +51,13 @@
             <kind>1</kind>
             <string>///Version Init
 
-printVersion="Bit Wing " + currentVersion+" (Checking for Updates...)";
+//printVersion="Bit Wing " + currentVersion+" (Checking for Updates...)";
+
+printVersion="Bit Wing " + currentVersion;
+
+if(global.inIDE){
+    printVersion=printVersion+"(Dev)";
+}
 </string>
           </argument>
         </arguments>
@@ -74,6 +80,7 @@ printVersion="Bit Wing " + currentVersion+" (Checking for Updates...)";
             <kind>1</kind>
             <string>///Check Internet
 
+/*
 if(os_is_network_connected()){
 
     file=http_get_file("https://dl.dropboxusercontent.com/u/68488237/updates/Bit%20Wing/version",
@@ -85,6 +92,8 @@ if(os_is_network_connected()){
     
     printVersion="Bit Wing " + currentVersion+" (Error Checking for Updates)";
 }       
+
+*/
 </string>
           </argument>
         </arguments>
@@ -131,7 +140,9 @@ if(os_is_network_connected()){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(!checked){
+            <string>/*
+
+if(!checked){
     if ds_map_find_value(async_load, "id") == file{
         if(ds_map_find_value(async_load, "status")==0){
             file=file_text_open_read(working_directory+"\version");
@@ -163,16 +174,23 @@ if(os_is_network_connected()){
         printVersion="Bit Wing " + currentVersion+" (Checking for Updates...)";
     }
     
-    /*
+    */
+    
+    /* //leave this chunk commented
     if(printVersion==currentVersion+" - Update Available ("){
         printVersion=currentVersion+" (Error Checking for Updates)";
         checked=1;
     }
     */
+    
+    /*
     if(global.inIDE){
         printVersion="Bit Wing " + currentVersion + "(Dev)";
     }
 }
+
+*/
+
 </string>
           </argument>
         </arguments>
@@ -258,9 +276,13 @@ if(global.gameStart){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(updateAvailable){
+            <string>/*
+
+if(updateAvailable){
     url_open_ext('http://gamejolt.com/games/bit-wing/82538', '_blank');
 }
+
+*/
 </string>
           </argument>
         </arguments>
