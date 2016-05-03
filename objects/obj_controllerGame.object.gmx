@@ -321,7 +321,13 @@ if(global.explosionModifier&gt;1){
 draw_set_halign(fa_center);
 draw_set_color(c_yellow);
 
-draw_text_transformed(room_width/2,20,score,1.5,1.5,0);
+
+if(instance_number(obj_gameOver)&lt;1){
+    draw_text_transformed(room_width/2,20,score,1.5,1.5,0);
+} else {
+    draw_text_transformed(room_width/2,room_height-20,
+                            "Your Score: "+string(score),1.5,1.5,0);
+}
 </string>
           </argument>
         </arguments>

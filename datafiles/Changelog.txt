@@ -7,6 +7,7 @@ New:
 -Overloaded mode (With a 200 killstreak, get a x20 kill)
 -Score multipliers (each kill grants .1)
 -Fully automatic updater!
+-High scores
 
 Changes/Improvements:
 -Hitboxes adjusted for accuracy
