@@ -326,7 +326,11 @@ if(instance_number(obj_gameOver)&lt;1){
     draw_text_transformed(room_width/2,20,score,1.5,1.5,0);
 } else {
     draw_text_transformed(room_width/2,room_height-20,
+<<<<<<< 8dc2dd0b12b427576f071e8dcce22f19c9301a65
                             "Your Score: "+string(score),1.5,1.5,0);
+=======
+                            "This Game's Score: "+string(score),1.5,1.5,0);
+>>>>>>> ee85158f0ab906c317a90059a93401670f33cea4
 }
 </string>
           </argument>
